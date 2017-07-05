@@ -25,7 +25,7 @@ $row = $rows->fetch (PDO::FETCH_ASSOC);
 <div class="row">    
 <div class="form-group col-md-2">
 	<label for="campo2">Numero do Renavam</label>
-	<input type="number" class="form-control" name="nro_renavam" value="<?php echo $row['nro_renavam']?>"  >
+	<input type="number" class="form-control" name="nro_renavam" value="<?php echo $row['nro_renavam']?>">
 </div>
 
 <div class="form-group col-md-2">

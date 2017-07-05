@@ -19,14 +19,7 @@ $motorista = $motoristas->fetch (PDO::FETCH_ASSOC);
 <div class="form-group col-md-2">
 	<label for="campo1">Veiculo</label>
 	<select name="veiculo_id" name="veiculo_id" class="form-control"
-		<?php /*?><?php
-		$veiculos = $PDO->query("SELECT * FROM trans.veiculo where veiculo_id = '$veiculo_id'");
-		$veiculo = $veiculos->fetch (PDO::FETCH_ASSOC));
-		{
-			echo "<option value= ".$veiculo['veiculo_id']."> ".$veiculo['placa']."</option>";
-			//echo "<option value=".$row['COD_EMPRESA']."> ".$row['DEN_EMPRESA']."</option>";
-		}		
-		?><?php */?>
+		
         
         
 	</select>

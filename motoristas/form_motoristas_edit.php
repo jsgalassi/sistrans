@@ -18,10 +18,14 @@ $motorista = $motoristas->fetch (PDO::FETCH_ASSOC);
 <div class="row">
 <div class="form-group col-md-2">
 	<label for="campo1">Veiculo</label>
-	<select name="veiculo_id" name="veiculo_id" class="form-control"
-		
-        
-        
+	<select name="veiculo_id" name="veiculo_id" class="form-control">
+		<?php
+		$veiculos = $PDO->query("SELECT * FROM trans.motorista m inner join trans.veiculo v on (m.veiculo_id = v.veiculo_id) where motorista_id = '$motorista_id");
+		while ($veiculo = $veiculos->fetch (PDO::FETCH_ASSOC))
+		{
+			echo "<option value= ".$veiculo['veiculo_id']."> ".$veiculo['placa']."</option>";
+		}
+		?>
 	</select>
 </div>
 

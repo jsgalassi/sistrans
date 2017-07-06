@@ -5,7 +5,7 @@
 <h2>Listar de Motoristas</h2>
 
 <div class="container">
-<a href="form_insert.php" class="btn btn-default">Cadastrar Novo</a>
+<a href="form_motoristas.php" class="btn btn-default">Cadastrar Novo</a>
 </div>
 <hr/>
 <div class="container">
@@ -19,8 +19,7 @@
 	<th>CPF</th>
    	<th>Nro CNH</th>
         <th>Tipo</th>
-        <th>Cidade</th>
-        
+        <th>Cidade</th>      
         <th>Açoes</th>
     </tr>
 </thead>

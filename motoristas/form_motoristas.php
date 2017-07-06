@@ -11,6 +11,7 @@
 <div class="form-group col-md-2">
 	<label for="campo1">Veiculo</label>
 	<select name="veiculo_id" name="veiculo_id" class="form-control">
+    	<option>Selecione o Veiculo</option>
 		<?php
 		$rows = $PDO->query("SELECT placa, veiculo_id FROM trans.veiculo");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))

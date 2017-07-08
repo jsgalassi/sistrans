@@ -87,8 +87,7 @@
 			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
 			
 		}
-
-				?>
+		?>
 	</select>
 </div></div>
 
@@ -98,7 +97,6 @@
 	<input type="text" class="form-control" name="obs" style="text-transform:uppercase">
 </div>
 </div>
-
 
 <center>
 <div id="actions" class="row">

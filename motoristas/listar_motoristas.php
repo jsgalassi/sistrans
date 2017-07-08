@@ -1,5 +1,5 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
-<?php include_once '../inc/header.php'; ?>
+<?php include_once '../inc/header.php';?>
 <?php include_once '../conex/conexao.php';?>
   
 <h2>Listar de Motoristas</h2>
@@ -18,9 +18,9 @@
 	<th>Nome</th>
 	<th>CPF</th>
    	<th>Nro CNH</th>
-        <th>Tipo</th>
-        <th>Cidade</th>      
-        <th>Açoes</th>
+    <th>Tipo</th>
+    <th>Cidade</th>      
+    <th>Ações</th>
     </tr>
 </thead>
 
@@ -34,9 +34,9 @@ echo
 	<td><h5>$row[motorista_id]</h5></td>
 	<td><h5>$row[veiculo_id]</h5></td>
 	<td><h5>$row[nome]</h5></td>
-        <td><h5>$row[cpf]</h5></td>
-        <td><h5>$row[nro_cnh]</h5></td>
-        <td><h5>$row[tipo_cnh]</h5></td>
+	<td><h5>$row[cpf]</h5></td>
+	<td><h5>$row[nro_cnh]</h5></td>
+	<td><h5>$row[tipo_cnh]</h5></td>
 	<td><h5>$row[cidade_id]</h5></td>
 		<td><h5><a href='form_motoristas_edit.php?motorista_id=$row[motorista_id]'>Editar</a> - 
 		<a href='delete.php?veiculo_id=$row[motorista_id]'>Excluir</a></h5></td>

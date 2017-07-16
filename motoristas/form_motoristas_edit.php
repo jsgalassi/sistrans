@@ -13,6 +13,7 @@ $motorista = $motoristas->fetch (PDO::FETCH_ASSOC);
 <!--Linha 14 envia dos dados alterados do formulario de edição para o arquivo edit.php via POST  -->
 <form action="edit.php" method="post">
 
+<input type="hidden" class="form-control" name="motorista_id" value="<?php echo $row['motorista_id']?>" >
 <div class="row">
 <div class="form-group col-md-2">
 	<label for="campo1">Veiculo</label>
@@ -26,7 +27,7 @@ $motorista = $motoristas->fetch (PDO::FETCH_ASSOC);
 		?>
         
         <?php
-		$rows = $PDO->query("SELECT placa, veiculo_id FROM trans.veiculo");
+		$rows = $PDO->query("SELECT * FROM veiculo where veiculo_id <> $motorista_id");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
 			echo "<option value= ".$row['veiculo_id']."> ".$row['placa']."</option>";

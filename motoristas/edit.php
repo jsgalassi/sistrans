@@ -1,40 +1,56 @@
 ﻿<?php include_once '../conex/conexao.php';
 
+
+/*UPDATE `trans`.`motorista` SET `veiculo_id`='32' WHERE `motorista_id`='1';*/
+
 try 
 {
+	
 	$veiculo_id = strtoupper($_POST['veiculo_id']);
-	$placa = strtoupper($_POST['placa']);
-	$nro_renavam = strtoupper($_POST['nro_renavam']);
-	$ano = strtoupper($_POST['ano']);
-	$modelo = strtoupper($_POST['modelo']);
-	$chassi = strtoupper($_POST['chassi']);
-	$marca = strtoupper($_POST['marca']);
-	$cor = strtoupper($_POST['cor']);
-	$descricao = strtoupper($_POST['descricao']);
+	$nome = strtoupper($_POST['nome']);
+	$cpf = strtoupper($_POST['cpf']);
+	$rg = strtoupper($_POST['rg']);
+	$nro_cnh = strtoupper($_POST['nro_cnh']);
+	$tipo_cnh = strtoupper($_POST['tipo_cnh']);
+	$logradouro = strtoupper($_POST['logradouro']);
+	$nro = strtoupper($_POST['nro']);
+	$complemento = strtoupper($_POST['complemento']);
+	$bairro = strtoupper($_POST['bairro']);
+	$cep = strtoupper($_POST['cep']);
+	$cidade_id = strtoupper($_POST['cidade_id']);
+	$obs = strtoupper($_POST['obs']);
 
-	$sql = $PDO->prepare("UPDATE trans.veiculo SET 
-		placa = :placa, 
-		nro_renavam = :nro_renavam,
-		ano = :ano,
-		modelo = :modelo,
-		chassi = :chassi,
-		marca = :marca,
-		cor = :cor,
-		descricao = :descricao
+	$sql = $PDO->prepare("UPDATE trans.motorista SET 
+		veiculo_id = :veiculo_id, 
+		nome = :nome,
+		cpf = :cpf,
+		rg = :rg,
+		nro_cnh = :nro_cnh,
+		logradouro = :logradouro,
+		nro = :nro,
+		complemento = :complemento,
+		bairro = :bairro,
+		cep = :cep,
+		cidade_id = :cidade_id,		
+		obs = :obs
 		WHERE 
-		veiculo_id = :veiculo_id");
+		motorista_id = :motorista_id");
 			$sql->bindParam(':veiculo_id', $veiculo_id);
-			$sql->bindParam(':placa', $placa);
-			$sql->bindParam(':nro_renavam', $nro_renavam);
-			$sql->bindParam(':ano', $ano);
-			$sql->bindParam(':modelo', $modelo);
-			$sql->bindParam(':chassi', $chassi);
-			$sql->bindParam(':marca', $marca);
-			$sql->bindParam(':cor', $cor);
-			$sql->bindParam(':descricao', $descricao);
+			$sql->bindParam(':nome', $nome);
+			$sql->bindParam(':cpf', $cpf);
+			$sql->bindParam(':rg', $rg);
+			$sql->bindParam(':nro_cnh', $nro_cnh);
+			$sql->bindParam(':tipo_cnh', $tipo_cnh);
+			$sql->bindParam(':logradouro', $logradouro);
+			$sql->bindParam(':nro', $nro);
+			$sql->bindParam(':complemento', $complemento);
+			$sql->bindParam(':bairro', $bairro);
+			$sql->bindParam(':cep', $cep);
+			$sql->bindParam(':cidade_id', $cidade_id);
+			$sql->bindParam(':obs', $obs);
 			$sql->execute();
 
-	header("location: listar_veiculos.php");
+	header("location: listar_motoristas.php");
 }
 catch
 (PDOException $e)

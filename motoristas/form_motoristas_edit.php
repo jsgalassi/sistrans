@@ -12,8 +12,9 @@ $motorista = $motoristas->fetch (PDO::FETCH_ASSOC);
 ?>
 <!--Linha 14 envia dos dados alterados do formulario de edição para o arquivo edit.php via POST  -->
 <form action="edit.php" method="post">
-
+<!--Linha 16 não sei pra que serve, mais se excluir essa merda não funciona o editar  -->
 <input type="hidden" class="form-control" name="motorista_id" value="<?php echo $row['motorista_id']?>" >
+
 <div class="row">
 <div class="form-group col-md-2">
 	<label for="campo1">Veiculo</label>

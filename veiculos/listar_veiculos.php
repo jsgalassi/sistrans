@@ -38,7 +38,7 @@ echo
 	<td><h5>$row[cor]</h5></td>
 		
 		<td><h5><a href='view.php?veiculo_id=$row[veiculo_id]'class='btn btn-default'>Visualizar</a>
-		<a href='form_edit.php?veiculo_id=$row[veiculo_id]'class='btn btn-primary'>Editar</a>
+		<a href='form_veiculos_edit.php?veiculo_id=$row[veiculo_id]'class='btn btn-primary'>Editar</a>
 		<a href='delete.php?veiculo_id=$row[veiculo_id]'class='btn btn-danger'>Excluir</a></h5></td>
 </tr>";
 }

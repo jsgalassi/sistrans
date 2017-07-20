@@ -73,7 +73,7 @@ $row = $rows->fetch (PDO::FETCH_ASSOC);
 	<!--Linha 76 não sei pra que serve, mais se excluir essa merda não funciona o editar  -->
 		
 		
-		<a href="read.php" class="btn btn-success">Voltar</a>
+        <a href="listar_veiculos.php" class="btn btn-success">Voltar</a>
 </div>
 </div>
 </center>

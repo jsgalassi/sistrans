@@ -1,11 +1,11 @@
 ﻿<?php include_once '../conex/conexao.php';
 
 
-/*UPDATE `trans`.`motorista` SET `veiculo_id`='32' WHERE `motorista_id`='1';*/
-
+/*UPDATE `trans`.`motorista` SET `veiculo_id`='32' WHERE `motorista_id`='1';
+*/
 try 
 {
-	
+	$motorista_id = strtoupper($_POST['motorista_id']);
 	$veiculo_id = strtoupper($_POST['veiculo_id']);
 	$nome = strtoupper($_POST['nome']);
 	$cpf = strtoupper($_POST['cpf']);
@@ -21,6 +21,7 @@ try
 	$obs = strtoupper($_POST['obs']);
 
 	$sql = $PDO->prepare("UPDATE trans.motorista SET 
+		motorista_id = :motorista_id,
 		veiculo_id = :veiculo_id, 
 		nome = :nome,
 		cpf = :cpf,
@@ -35,6 +36,8 @@ try
 		obs = :obs
 		WHERE 
 		motorista_id = :motorista_id");
+		
+			$sql->bindParam(':veiculo_id', $veiculo_id);
 			$sql->bindParam(':veiculo_id', $veiculo_id);
 			$sql->bindParam(':nome', $nome);
 			$sql->bindParam(':cpf', $cpf);

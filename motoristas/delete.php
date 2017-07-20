@@ -2,13 +2,13 @@
 
 try 
 {
-	$veiculo_id = $_GET['veiculo_id'];
-	$sql = $PDO->prepare("DELETE FROM trans.veiculo
+	$motorista_id = $_GET['motorista_id'];
+	$sql = $PDO->prepare("DELETE FROM trans.motorista
 			WHERE 
-			veiculo_id = :veiculo_id");
-			$sql->bindParam(':veiculo_id', $veiculo_id);		
+			motorista_id = :motorista_id");
+			$sql->bindParam(':motorista_id', $motorista_id);		
 			$sql->execute();
-	header("location: listar_veiculos.php");
+	header("location: listar_motoristas.php");
 }
 catch
 (PDOException $e)

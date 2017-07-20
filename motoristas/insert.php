@@ -72,6 +72,6 @@ if ( ! $result )
     exit;
 }
 /* Linha 55 redireciona apos inserção no banco */
-header("location: index.php");
+header("location: listar_motoristas.php");
 ?>
 <?php include_once '../inc/footer.php'; ?>

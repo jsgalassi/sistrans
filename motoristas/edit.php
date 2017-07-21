@@ -37,7 +37,7 @@ try
 		WHERE 
 		motorista_id = :motorista_id");
 		
-			$sql->bindParam(':veiculo_id', $veiculo_id);
+			$sql->bindParam(':motorista_id', $motorista_id);
 			$sql->bindParam(':veiculo_id', $veiculo_id);
 			$sql->bindParam(':nome', $nome);
 			$sql->bindParam(':cpf', $cpf);

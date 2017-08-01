@@ -17,7 +17,7 @@ try
 	$complemento = strtoupper($_POST['complemento']);
 	$bairro = strtoupper($_POST['bairro']);
 	$cep = strtoupper($_POST['cep']);
-	
+	$cidade_id = strtoupper($_POST['cidade_id']);
 	$obs = strtoupper($_POST['obs']);
 
 	$sql = $PDO->prepare("UPDATE trans.motorista SET 
@@ -32,7 +32,7 @@ try
 		complemento = :complemento,
 		bairro = :bairro,
 		cep = :cep,
-			
+		cidade_id = :cidade_id,	
 		obs = :obs
 		WHERE 
 		motorista_id = :motorista_id");
@@ -49,7 +49,7 @@ try
 			$sql->bindParam(':complemento', $complemento);
 			$sql->bindParam(':bairro', $bairro);
 			$sql->bindParam(':cep', $cep);
-			
+			$sql->bindParam(':cidade_id', $cidade_id);
 			$sql->bindParam(':obs', $obs);
 			$sql->execute();
 

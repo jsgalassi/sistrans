@@ -10,6 +10,7 @@ try
 	$chassi = strtoupper($_POST['chassi']);
 	$marca = strtoupper($_POST['marca']);
 	$cor = strtoupper($_POST['cor']);
+        
 	$descricao = strtoupper($_POST['descricao']);
 
 	$sql = $PDO->prepare("UPDATE trans.veiculo SET 
@@ -21,6 +22,7 @@ try
 		marca = :marca,
 		cor = :cor,
 		descricao = :descricao
+                
 		WHERE 
 		veiculo_id = :veiculo_id");
 			$sql->bindParam(':veiculo_id', $veiculo_id);
@@ -32,6 +34,7 @@ try
 			$sql->bindParam(':marca', $marca);
 			$sql->bindParam(':cor', $cor);
 			$sql->bindParam(':descricao', $descricao);
+                        
 			$sql->execute();
 
 	header("location: listar_veiculos.php");

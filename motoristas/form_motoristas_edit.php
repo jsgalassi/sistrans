@@ -100,7 +100,7 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 			echo "<option value= ".$row4['cidade_id']."> ".$row4['nome']."-".$row4['uf']."</option>";
 		}
 	
-		$rows5 = $PDO->query("SELECT * FROM uf_cidade");
+		$rows5 = $PDO->query("SELECT * FROM uf_cidade where cidade_id <> $motorista_id");
 		while ($row5 = $rows5->fetch (PDO::FETCH_ASSOC))
 		{
 			echo "<option value= ".$row5['cidade_id']."> ".$row5['nome']."-".$row5['uf']."</option>";

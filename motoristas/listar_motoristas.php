@@ -2,7 +2,7 @@
 <?php include_once '../inc/header.php';?>
 <?php include_once '../conex/conexao.php';?>
   
-<h2>Listar de Motoristas</h2>
+<h2>Listar Motoristas</h2>
 
 <div class="container">
 <a href="form_motoristas.php" class="btn btn-default">Cadastrar Novo</a>

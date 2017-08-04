@@ -1,12 +1,12 @@
 ﻿<?php include_once '../conex/conexao.php';
 
 
-/*UPDATE `trans`.`motorista` SET `veiculo_id`='32' WHERE `motorista_id`='1';
+/*UPDATE `trans`.`motorista` SET `veiculo_id`='25', `nome`='JEF', `cpf`='050.670.449-18', `rg`='9 130 900 9', `nro_cnh`='0000000000', `tipo_cnh`='A B', `logradouro`='RUA SEBASTIAO ROBERTO', `complemento`='N', `bairro`='JARDIM COLUMBIA', `cep`='86057-130', `cidade_id`='4101' WHERE `motorista_id`='6';
 */
 try 
 {
 	$motorista_id = strtoupper($_POST['motorista_id']);
-	$veiculo_id = strtoupper($_POST['veiculo_id']);
+	$veiculo_id = ($_POST['veiculo_id']);
 	$nome = strtoupper($_POST['nome']);
 	$cpf = strtoupper($_POST['cpf']);
 	$rg = strtoupper($_POST['rg']);
@@ -17,7 +17,7 @@ try
 	$complemento = strtoupper($_POST['complemento']);
 	$bairro = strtoupper($_POST['bairro']);
 	$cep = strtoupper($_POST['cep']);
-	$cidade_id = strtoupper($_POST['cidade_id']);
+	$cidade_id = ($_POST['cidade_id']);
 	$obs = strtoupper($_POST['obs']);
 
 	$sql = $PDO->prepare("UPDATE trans.motorista SET 
@@ -27,6 +27,7 @@ try
 		cpf = :cpf,
 		rg = :rg,
 		nro_cnh = :nro_cnh,
+		tipo_cnh = :tipo_cnh,
 		logradouro = :logradouro,
 		nro = :nro,
 		complemento = :complemento,

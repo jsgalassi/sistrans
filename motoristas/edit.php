@@ -38,20 +38,20 @@ try
 		WHERE 
 		motorista_id = :motorista_id");
 		
-			$sql->bindParam(':motorista_id', $motorista_id);
-			$sql->bindParam(':veiculo_id', $veiculo_id);
-			$sql->bindParam(':nome', $nome);
-			$sql->bindParam(':cpf', $cpf);
-			$sql->bindParam(':rg', $rg);
-			$sql->bindParam(':nro_cnh', $nro_cnh);
-			$sql->bindParam(':tipo_cnh', $tipo_cnh);
-			$sql->bindParam(':logradouro', $logradouro);
-			$sql->bindParam(':nro', $nro);
-			$sql->bindParam(':complemento', $complemento);
-			$sql->bindParam(':bairro', $bairro);
-			$sql->bindParam(':cep', $cep);
-			$sql->bindParam(':cidade_id', $cidade_id);
-			$sql->bindParam(':obs', $obs);
+			$sql->bindValue(':motorista_id', $motorista_id);
+			$sql->bindValue(':veiculo_id', $veiculo_id);
+			$sql->bindValue(':nome', $nome);
+			$sql->bindValue(':cpf', $cpf);
+			$sql->bindValue(':rg', $rg);
+			$sql->bindValue(':nro_cnh', $nro_cnh);
+			$sql->bindValue(':tipo_cnh', $tipo_cnh);
+			$sql->bindValue(':logradouro', $logradouro);
+			$sql->bindValue(':nro', $nro);
+			$sql->bindValue(':complemento', $complemento);
+			$sql->bindValue(':bairro', $bairro);
+			$sql->bindValue(':cep', $cep);
+			$sql->bindValue(':cidade_id', $cidade_id);
+			$sql->bindValue(':obs', $obs);
 			$sql->execute();
 
 	header("location: listar_motoristas.php");

@@ -38,7 +38,7 @@ echo
 	<td><h5>$row[nro_cnh]</h5></td>
 	<td><h5>$row[tipo_cnh]</h5></td>
 	<td><h5>$row[cidade_id]</h5></td>
-		<td><h5><a href='form_mot_edit.php?motorista_id=$row[motorista_id]'>Editar</a> - 
+		<td><h5><a href='form_motoristas_edit.php?motorista_id=$row[motorista_id]'>Editar</a> - 
 		<a href='delete.php?motorista_id=$row[motorista_id]'>Excluir</a></h5></td>
 </tr>";
 }

@@ -1,8 +1,9 @@
+<head>
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="../js/jquery.mask.min" type="text/javascript"></script>
 <script src="../js/bootstrap-notify.min" type="text/javascript"></script>
-
+</head>
 <?php include_once '../inc/header.php'; ?>
 <?php include_once '../conex/conexao.php';?>
 

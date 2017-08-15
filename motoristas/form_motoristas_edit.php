@@ -7,7 +7,7 @@
 <?php
 /*Linha 9 a 11 pega o ID que veio via GET e faz um SELECT para trazer no formulario apenas os dados  */
 $motorista_id = $_GET['motorista_id'];
-$rows1 = $PDO->query("SELECT * FROM trans.motorista m inner join trans.veiculo v on (m.veiculo_id = v.veiculo_id) where motorista_id = '$motorista_id'");
+$rows1 = $PDO->query("SELECT * FROM trans.motorista where motorista_id = '$motorista_id'");
 $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 ?>
 <!--Linha 14 envia dos dados alterados do formulario de edição para o arquivo edit.php via POST  -->
@@ -16,21 +16,27 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 <input type="hidden" class="form-control" name="motorista_id" value="<?php echo $row1['motorista_id']?>" >
 
 <div class="row">
+<div class="col-md-1">
+<input type="text" class="form-control" name="motorista_id" value="<?php echo $row1['motorista_id']?>" disabled>
+</div>
+</div>
+
+<div class="row">
 <div class="form-group col-md-2">
 	<label for="campo1">Veiculo</label>
-	<select name="veiculo_id" name="veiculo_id" class="form-control">
+	<select name="veiculo_id" name="veiculo_id" id="veiculo_id" class="form-control">
 		<?php
-		$motorista_id = $_GET['motorista_id'];
-		$rows = $PDO->query("SELECT * FROM trans.motorista m inner join trans.veiculo v on (m.veiculo_id = v.veiculo_id) where motorista_id = '$motorista_id'");
-		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
+		$opts = $PDO->query("SELECT mt.veiculo_id, vc.placa FROM motorista mt join veiculo vc on (mt.veiculo_id = vc.veiculo_id) where motorista_id = '$motorista_id'");
+		while ($opt = $opts->fetch(PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['veiculo_id']."> ".$row['placa']."</option>";
+			echo "<option value= ".$opt['veiculo_id']."> ".$opt['placa']."</option>";
 		}
-		      
-		$rows = $PDO->query("SELECT * FROM veiculo where veiculo_id <> $motorista_id");
-		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
+        ?>
+		<?php     
+		$opts = $PDO->query("SELECT * FROM veiculo");
+		while ($opt = $opts->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['veiculo_id']."> ".$row['placa']."</option>";
+			echo "<option value= ".$opt['veiculo_id']."> ".$opt['placa']."</option>";
 		}
 		?>
 	</select>
@@ -100,8 +106,9 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 		{
 			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
 		}
-	
-		$rows = $PDO->query("SELECT * FROM uf_cidade where cidade_id <> $motorista_id");
+                ?>
+                <?php
+		$rows = $PDO->query("SELECT * FROM uf_cidade");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
 			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
@@ -127,3 +134,4 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 </form>
 
 <?php include_once '../inc/footer.php'; ?>
+

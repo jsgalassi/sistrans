@@ -1,9 +1,4 @@
-<head>
 <link href="../css/bootstrap.min.css" rel="stylesheet">
-<script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="../js/jquery.mask.min" type="text/javascript"></script>
-<script src="../js/bootstrap-notify.min" type="text/javascript"></script>
-</head>
 <?php include_once '../inc/header.php'; ?>
 <?php include_once '../conex/conexao.php';?>
 
@@ -86,10 +81,10 @@
 	<label for="campo2">Cidade/UF</label>
 	<select name="cidade_id" name="cidade_id" class="form-control">
 		<?php
-		$rows = $PDO->query("SELECT nome, uf, cidade_id FROM trans.uf_cidade");
+		$rows = $PDO->query("SELECT cidade, uf, cidade_id FROM trans.uf_cidade");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
+			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
 			
 		}
 		?>
@@ -107,7 +102,7 @@
 <div id="actions" class="row">
 	<div class="col-md-12">
 		<button type="submit" class="btn btn-primary">Salvar</button>
-		<a href="manfrete.php" class="btn btn-danger">Cancelar</a>
+                <a href="listar_motoristas.php" class="btn btn-danger">Cancelar</a>
 </div>
 </div>
 </center>

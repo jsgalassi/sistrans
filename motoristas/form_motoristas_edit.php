@@ -26,7 +26,7 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 	<label for="campo1">Veiculo</label>
 	<select name="veiculo_id" name="veiculo_id" id="veiculo_id" class="form-control">
 		<?php
-		$opts = $PDO->query("SELECT mt.veiculo_id, vc.placa FROM motorista mt join veiculo vc on (mt.veiculo_id = vc.veiculo_id) where motorista_id = '$motorista_id'");
+		$opts = $PDO->query("SELECT * FROM trans.motorista m inner join trans.veiculo v on (m.veiculo_id = v.veiculo_id) where motorista_id = '$motorista_id'");
 		while ($opt = $opts->fetch(PDO::FETCH_ASSOC))
 		{
 			echo "<option value= ".$opt['veiculo_id']."> ".$opt['placa']."</option>";
@@ -101,17 +101,17 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 	<label for="campo2">Cidade/UF</label>
 	<select name="cidade_id" name="cidade_id" class="form-control">
 		<?php
-		$rows = $PDO->query("SELECT c.uf, c.nome FROM uf_cidade c join motorista m on (m.cidade_id = c.cidade_id) where motorista_id = '$motorista_id'");
+		$rows = $PDO->query("SELECT * FROM trans.motorista m inner join trans.uf_cidade c on (m.cidade_id = c.cidade_id) where motorista_id = '$motorista_id'");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
+			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
 		}
                 ?>
                 <?php
 		$rows = $PDO->query("SELECT * FROM uf_cidade");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
+			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
 		}
 		?>
 	</select>

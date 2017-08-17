@@ -57,9 +57,9 @@ try
 	header("location: listar_motoristas.php");
 }
 catch
-(PDOException $e)
+(PDOException $sql)
 {
-	echo 'Não foi possivel realizar a alteração '. $e->getMessage();
+	echo 'Não foi possivel realizar a alteração '. $sql->getMessage();
 }
 
 ?>

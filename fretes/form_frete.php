@@ -18,22 +18,18 @@
 		}
 		?>
 	</select>
-</div></div>
+</div>
 
-<div class="row">
-<div class="form-group col-md-2">
+<div class="form-group col-md-10">
 	<label for="campo2">Cidade</label>
 	<select name="cidade_id" name="cidade_id" class="form-control">
 		<?php
-		$rows = $PDO->query("SELECT nome, uf, cidade_id FROM trans.uf_cidade");
+		$rows = $PDO->query("SELECT cidade, uf, cidade_id FROM trans.uf_cidade");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['nome']."-".$row['uf']."</option>";
+			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
 			
-			//echo "<option value=".$row['COD_EMPRESA']."> ".$row['DEN_EMPRESA']."</option>";
 		}
-
-		
 		?>
 	</select>
 </div></div>
@@ -66,7 +62,7 @@
            
 <div class="form-group col-md-2">
 	<label for="campo8">Total Percorrido</label>
-	<input type="text" class="form-control" name="km_percorrido">
+	<input type="text" class="form-control" name="percorrido">
 </div></div>
 
  <div class="row">            

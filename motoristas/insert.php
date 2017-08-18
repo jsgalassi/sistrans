@@ -66,12 +66,11 @@ $stmt->bindParam( 'cidade_id', $cidade_id);
 $stmt->bindParam( 'obs', $obs);
 $result = $stmt->execute();
 
-header("location: listar_motoristas.php");
-
 if ( ! $result )
 {
     ( $stmt->errorInfo() );
     exit;
 }
+header("location: listar_motoristas.php");
 ?>
 <?php include_once '../inc/footer.php'; ?>

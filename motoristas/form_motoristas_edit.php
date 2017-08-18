@@ -101,19 +101,19 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 	<label for="campo2">Cidade/UF</label>
 	<select name="cidade_id" name="cidade_id" class="form-control">
 		<?php
-		$rows = $PDO->query("SELECT * FROM trans.motorista m inner join trans.uf_cidade c on (m.cidade_id = c.cidade_id) where motorista_id = '$motorista_id'");
-		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
-		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
-		}
-                ?>
-                <?php
-		$rows = $PDO->query("SELECT * FROM uf_cidade");
-		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
-		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
-		}
+        $rows = $PDO->query("SELECT * FROM trans.motorista m inner join trans.uf_cidade c on (m.cidade_id = c.cidade_id) where motorista_id = '$motorista_id'");
+        while ($row = $rows->fetch (PDO::FETCH_ASSOC))
+        {
+            echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
+        }
 		?>
+		<?php
+        $rows = $PDO->query("SELECT * FROM uf_cidade");
+        while ($row = $rows->fetch (PDO::FETCH_ASSOC))
+        {
+            echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
+        }
+        ?>
 	</select>
 </div></div>
 

@@ -1,6 +1,8 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <?php include_once '../inc/header.php'; ?>
 <?php include_once '../conex/conexao.php';?>
+<script language="javascript" src="../js/jquery-3.2.1.min.js.js"></script>
+<script language="javascript" src="../js/jquery.mask.min.js"></script>
 
 <h2>Novo Frete</h2>
 
@@ -37,14 +39,22 @@
 <div class="row">   
 <div class="form-group col-md-2">
 	<label for="campo3">Data de Entrada</label>
-	<input type="date" class="form-control" name="data_entrada">
+	<input type="date" class="form-control" name="data_entrada" id="data_entrada">
 </div>
-
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#data_entrada').mask('00/00/0000')
+})
+</script>
 <div class="form-group col-md-2">
 	<label for="campo4">Data de Fechamento</label>
-	<input type="date" class="form-control" name="data_fechamento">
+        <input type="date" class="form-control" name="data_fechamento" id="data_fechamento">
 </div>
-
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#data_fechamento').mask('00/00/0000')
+})
+</script>
 <div class="form-group col-md-2">
 	<label for="campo5">Nro de Entrada</label>
 	<input type="text" class="form-control" name="nro_entrada">

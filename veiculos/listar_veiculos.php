@@ -10,10 +10,10 @@
 <hr/>
 <div class="container">
 <div class="table-responsive">
-<table class="table table-striped table-hover table-bordered">
+<table class="table table-striped table-hover ">
 <thead>
 <tr>
-	<th>Matricula</th>
+	<th>ID</th>
 	<th>Placa</th>	
 	<th>Ano</th>
 	<th>Modelo</th>
@@ -37,9 +37,9 @@ echo
 	<td><h5>$row[marca]</h5></td>
 	<td><h5>$row[cor]</h5></td>
 		
-		<td><h5><a href='view.php?veiculo_id=$row[veiculo_id]'class='btn btn-default'>Visualizar</a>
-		<a href='form_veiculos_edit.php?veiculo_id=$row[veiculo_id]'class='btn btn-primary'>Editar</a>
-		<a href='delete.php?veiculo_id=$row[veiculo_id]'class='btn btn-danger'>Excluir</a></h5></td>
+		<td><h5><a href='view.php?veiculo_id=$row[veiculo_id]'>Visualizar</a> - 
+		<a href='form_veiculos_edit.php?veiculo_id=$row[veiculo_id]'>Editar</a> - 
+		<a href='delete.php?veiculo_id=$row[veiculo_id]'>Excluir</a></h5></td>
 </tr>";
 }
 

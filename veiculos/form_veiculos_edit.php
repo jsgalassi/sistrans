@@ -1,6 +1,8 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <?php include_once '../inc/header.php'; ?>
 <?php include_once '../conex/conexao.php';?>
+<script language="javascript" src="../js/jquery-3.2.1.min.js.js"></script>
+<script language="javascript" src="../js/jquery.mask.min.js"></script>
 
 <h2>Editar Veiculos</h2>
 <hr/>
@@ -18,21 +20,29 @@ $row = $rows->fetch (PDO::FETCH_ASSOC);
 <div class="row">
 <div class="form-group col-md-2">
 	<label for="campo1">Placa</label>
-    <input type="text" class="form-control" name="placa"  style="text-transform:uppercase"  value="<?php echo $row['placa']?>" >
+        <input type="text" class="form-control" name="placa" id="placa" style="text-transform:uppercase"  value="<?php echo $row['placa']?>" >
 </div>
 </div>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#placa').mask('AAA-0000');
+    })
+    </script>
 <div class="row">    
 <div class="form-group col-md-2">
 	<label for="campo2">Numero do Renavam</label>
-	<input type="number" class="form-control" name="nro_renavam" value="<?php echo $row['nro_renavam']?>">
+	<input type="text" class="form-control" name="nro_renavam" value="<?php echo $row['nro_renavam']?>">
 </div>
 
 <div class="form-group col-md-2">
 	<label for="campo3">Ano de Fabricação</label>
-	<input type="number" class="form-control" name="ano" value="<?php echo $row['ano']?>">
+	<input type="text" class="form-control" name="ano" id="ano" value="<?php echo $row['ano']?>">
 </div>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#ano').mask('0000/0000');
+    })
+    </script>
 <div class="form-group col-md-6">
 	<label for="campo4">Modelo</label>
 	<input type="text" class="form-control" name="modelo"  style="text-transform:uppercase"  value="<?php echo $row['modelo']?>">

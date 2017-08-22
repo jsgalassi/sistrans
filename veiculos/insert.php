@@ -51,7 +51,7 @@ if ( ! $result )
     ( $stmt->errorInfo() );
     exit;
 }
-/* Linha 55 redireciona apos inser��o no banco */
+
 header("location: listar_veiculos.php");
 ?>
 <?php include_once '../inc/footer.php'; ?>

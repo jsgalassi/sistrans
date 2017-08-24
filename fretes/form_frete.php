@@ -29,7 +29,7 @@
 		$rows = $PDO->query("SELECT cidade, uf, cidade_id FROM trans.uf_cidade");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
+			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']." - ".$row['uf']."</option>";
 			
 		}
 		?>
@@ -105,5 +105,4 @@ else
 </div>
 </center>
 </form>
-
-
+<?php include_once '../inc/footer.php'; ?>

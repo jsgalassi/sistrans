@@ -71,6 +71,8 @@ if ( ! $result )
     ( $stmt->errorInfo() );
     exit;
 }
-header("location: listar_motoristas.php");
 ?>
+<script language="JavaScript"> 
+window.location="listar_motoristas.php"; 
+</script> 
 <?php include_once '../inc/footer.php'; ?>

@@ -50,8 +50,9 @@ if ( ! $result )
 {
     ( $stmt->errorInfo() );
     exit;
-}
-
-header("location: listar_veiculos.php");
+} 
 ?>
+<script language="JavaScript"> 
+window.location="listar_veiculos.php"; 
+</script> 
 <?php include_once '../inc/footer.php'; ?>

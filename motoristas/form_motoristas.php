@@ -6,7 +6,7 @@
 
 <h2>Cadastro de Motoristas</h2>
 
-<form action="insert.php" method="post">
+<form action="insert.php" method="post" >
 <hr/>
 
 <div class="row">

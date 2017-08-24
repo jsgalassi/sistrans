@@ -31,9 +31,13 @@ $row = $rows->fetch (PDO::FETCH_ASSOC);
 <div class="row">    
 <div class="form-group col-md-2">
 	<label for="campo2">Numero do Renavam</label>
-	<input type="text" class="form-control" name="nro_renavam" value="<?php echo $row['nro_renavam']?>">
+	<input type="text" class="form-control" name="nro_renavam" id="nro_renavam" value="<?php echo $row['nro_renavam']?>">
 </div>
-
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('#nro_renavam').mask('00000000000');
+    })
+    </script>
 <div class="form-group col-md-2">
 	<label for="campo3">Ano de Fabricação</label>
 	<input type="text" class="form-control" name="ano" id="ano" value="<?php echo $row['ano']?>">

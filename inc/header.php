@@ -38,11 +38,12 @@ a
 <div id="navbar" class="navbar-collapse collapse">
 <ul class="nav navbar-nav">          
 <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="" aria-expanded="false">
+	<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="" aria-expanded="false">
 		Menu <span class="caret"></span>
 	</a>
 <ul class="dropdown-menu">
-	<li><a href="">Permissões</a></li>
+	<li><a href="">Home</a></li>
+    <li><a href="">Permissões</a></li>
 	</ul>
 </li>
 </ul>

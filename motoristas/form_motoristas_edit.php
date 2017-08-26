@@ -47,7 +47,7 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
 
 <div class="form-group col-md-10">
 	<label for="campo2">Nome do Motorista</label>
-	<input type="text" class="form-control" name="nome" style="text-transform:uppercase" value="<?php echo $row1['nome']?>" required>
+	<input type="text" class="form-control" name="nome" id="nome" style="text-transform:uppercase" value="<?php echo $row1['nome']?>" required>
 </div>
 </div>
 
@@ -63,7 +63,7 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
         </script>
 <div class="form-group col-md-2">
 	<label for="campo4">RG</label>
-	<input type="text" class="form-control" name="rg" value="<?php echo $row1['rg']?>" required>
+	<input type="text" class="form-control" name="rg" id="rg" value="<?php echo $row1['rg']?>" required>
 </div>
 
 <div class="form-group col-md-2">
@@ -86,24 +86,24 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
     </script>  
 <div class="form-group col-md-5">
 	<label for="campo7">Logradouro</label>
-	<input type="text" class="form-control" name="logradouro" style="text-transform:uppercase" value="<?php echo $row1['logradouro']?>" required>
+	<input type="text" class="form-control" name="logradouro" id="logradouro" style="text-transform:uppercase" value="<?php echo $row1['logradouro']?>" required>
 </div>
 </div>
 
 <div class="row">    
 <div class="form-group col-md-1">
 	<label for="campo13">Nº</label>
-	<input type="text" class="form-control" name="nro" value="<?php echo $row1['nro']?>" required>
+	<input type="text" class="form-control" name="nro" id="nro" value="<?php echo $row1['nro']?>" required>
 </div>
 
 <div class="form-group col-md-4">
 	<label for="campo8">Complemento</label>
-	<input type="text" class="form-control" name="complemento" style="text-transform:uppercase" value="<?php echo $row1['complemento']?>">
+	<input type="text" class="form-control" name="complemento" id="complemento" style="text-transform:uppercase" value="<?php echo $row1['complemento']?>">
 </div>
  
 <div class="form-group col-md-7">
 	<label for="campo9">Bairro</label>
-	<input type="text" class="form-control" name="bairro" style="text-transform:uppercase" value="<?php echo $row1['bairro']?>" required>
+	<input type="text" class="form-control" name="bairro" id="bairro" style="text-transform:uppercase" value="<?php echo $row1['bairro']?>" required>
 </div></div>
 
 <div class="row">    
@@ -123,14 +123,14 @@ $row1 = $rows1->fetch (PDO::FETCH_ASSOC);
         $rows = $PDO->query("SELECT * FROM trans.motorista m inner join trans.uf_cidade c on (m.cidade_id = c.cidade_id) where motorista_id = '$motorista_id'");
         while ($row = $rows->fetch (PDO::FETCH_ASSOC))
         {
-            echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
+            echo "<option value= ".$row['cidade_id']."> ".$row['cidade']." - ".$row['uf']."</option>";
         }
 		?>
 		<?php
         $rows = $PDO->query("SELECT * FROM uf_cidade");
         while ($row = $rows->fetch (PDO::FETCH_ASSOC))
         {
-            echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
+            echo "<option value= ".$row['cidade_id']."> ".$row['cidade']." - ".$row['uf']."</option>";
         }
         ?>
 	</select>

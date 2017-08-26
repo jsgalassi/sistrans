@@ -37,7 +37,7 @@ echo
 	<td><h5>$row[cpf]</h5></td>
 	<td><h5>$row[nro_cnh]</h5></td>
 	<td><h5>$row[tipo_cnh]</h5></td>
-	<td><h5>$row[cidade]-$row[uf]</h5></td>
+	<td><h5>$row[cidade] - $row[uf]</h5></td>
 		<td><h5><a href='form_motoristas_edit.php?motorista_id=$row[motorista_id]'>Editar</a> - 
 		<a href='delete.php?motorista_id=$row[motorista_id]'>Excluir</a></h5></td>
 </tr>";
@@ -47,3 +47,4 @@ echo
 </tbody>
 </table>
 </div>
+<?php include_once '../inc/footer.php'; ?>

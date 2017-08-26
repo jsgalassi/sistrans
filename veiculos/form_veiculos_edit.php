@@ -49,30 +49,30 @@ $row = $rows->fetch (PDO::FETCH_ASSOC);
     </script>
 <div class="form-group col-md-6">
 	<label for="campo4">Modelo</label>
-	<input type="text" class="form-control" name="modelo"  style="text-transform:uppercase"  value="<?php echo $row['modelo']?>">
+	<input type="text" class="form-control" name="modelo" id="modelo" style="text-transform:uppercase"  value="<?php echo $row['modelo']?>">
 </div>
 
 <div class="form-group col-md-2">
 	<label for="campo5">Chassi</label>
-	<input type="text" class="form-control" name="chassi"  style="text-transform:uppercase"  value="<?php echo $row['chassi']?>" >
+	<input type="text" class="form-control" name="chassi" id="chassi" style="text-transform:uppercase"  value="<?php echo $row['chassi']?>" >
 </div>
 </div>    
 
 <div class="row">    
 <div class="form-group col-md-2">
 	<label for="campo6">Marca</label>
-	<input type="text" class="form-control" name="marca"  style="text-transform:uppercase"  value="<?php echo $row['marca']?>" >
+	<input type="text" class="form-control" name="marca" id="marca" style="text-transform:uppercase"  value="<?php echo $row['marca']?>" >
 </div>
 
 <div class="form-group col-md-2">
 	<label for="campo7">Cor</label>
-	<input type="text" class="form-control" name="cor"  style="text-transform:uppercase"  value="<?php echo $row['cor']?>" >
+	<input type="text" class="form-control" name="cor" id="cor" style="text-transform:uppercase"  value="<?php echo $row['cor']?>" >
 </div>
 
 
 <div class="form-group col-md-8">
 	<label for="campo5">Descrição do Veiculo</label>
-	<input type="text" class="form-control" name="descricao" style="text-transform:uppercase"  value="<?php echo $row['descricao']?>">
+	<input type="text" class="form-control" name="descricao" id="descricao" style="text-transform:uppercase"  value="<?php echo $row['descricao']?>">
 </div>
 </div>
 

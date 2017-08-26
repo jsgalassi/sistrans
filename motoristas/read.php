@@ -40,4 +40,4 @@ echo
 </div>
 </tbody>
 
-
+<?php include_once '../inc/footer.php'; ?>

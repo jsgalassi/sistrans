@@ -57,45 +57,36 @@ $(document).ready(function(){
 </script>
 <div class="form-group col-md-2">
 	<label for="campo5">Nro de Entrada</label>
-	<input type="text" class="form-control" name="nro_entrada">
+	<input type="text" class="form-control" name="nro_entrada" id="nro_entrada" required>
 </div>
  
 <div class="form-group col-md-2">
 	<label for="campo6">Km Inicial</label>
-	<input type="text" class="form-control" name="km_inicial">
+	<input type="text" class="form-control" name="kminicial" id="kminicial" required>
 </div>
       
 <div class="form-group col-md-2">
 	<label for="campo7">Km Final</label>
-	<input type="text" class="form-control" name="km_final">
+	<input type="text" class="form-control" name="kmfinal" id="kmfinal" required>
 </div>
            
 <div class="form-group col-md-2">
 	<label for="campo8">Total Percorrido</label>
-	<input type="text" class="form-control" name="percorrido">
+	<input type="text" class="form-control" name="percorrido" id="percorrido" disabled>
 </div></div>
 
  <div class="row">            
 <div class="form-group col-md-2">
 	<label for="campo9">Valor Frete</label>
-	<input type="text" class="form-control" name="vlr_frete">
+	<input type="text" class="form-control" name="vlr_frete" id="vlr_frete" disabled>
 </div>
        
 <div class="form-group col-md-2">
 	<label for="campo10">Nota Fiscal</label>
-	<input type="text" class="form-control" name="nf">
+	<input type="text" class="form-control" name="nf" id="nf" required>
 </div>
 </div>
-<input type="hidden" class="form-control" name="status" value="<?php
-if ($km_final == "")
-{
- echo "Em Transito";
-}
-else
-{
- echo "Finalizado";
-}
-?>">
+
 <center>
 <div id="actions" class="row">
 	<div class="col-md-12">

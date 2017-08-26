@@ -2,7 +2,11 @@
 
 try 
 {
-	$veiculo_id = $_GET['veiculo_id'];
+	$veiculo_id = isset($_GET['veiculo_id']) ? $_GET['veiculo_id'] : null;
+	if (empty($veiculo_id)) {
+		echo "ID não informado";
+		exit;
+	}
 	$sql = $PDO->prepare("DELETE FROM trans.veiculo
 			WHERE 
 			veiculo_id = :veiculo_id");

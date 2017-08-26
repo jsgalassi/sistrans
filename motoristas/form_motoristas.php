@@ -26,7 +26,7 @@
 
 <div class="form-group col-md-10">
 	<label for="campo2">Nome do Motorista</label>
-	<input type="text" class="form-control" name="nome" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="nome" id="nome" style="text-transform:uppercase" required>
 </div>
 </div>
 
@@ -42,7 +42,7 @@
         </script>
 <div class="form-group col-md-2">
 	<label for="campo4">RG</label>
-	<input type="text" class="form-control" name="rg" required>
+	<input type="text" class="form-control" name="rg" id="rg" required>
 </div>
 
 <div class="form-group col-md-2">
@@ -65,24 +65,24 @@
     </script> 
 <div class="form-group col-md-5">
 	<label for="campo7">Logradouro</label>
-	<input type="text" class="form-control" name="logradouro" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="logradouro" id="logradouro" style="text-transform:uppercase" required>
 </div>
 </div>
 
 <div class="row">    
 <div class="form-group col-md-1">
 	<label for="campo13">Nº</label>
-	<input type="text" class="form-control" name="nro" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="nro" id="nro" style="text-transform:uppercase" required>
 </div>
 
 <div class="form-group col-md-4">
 	<label for="campo8">Complemento</label>
-	<input type="text" class="form-control" name="complemento" style="text-transform:uppercase">
+	<input type="text" class="form-control" name="complemento" id="complemento" style="text-transform:uppercase">
 </div>
  
 <div class="form-group col-md-7">
 	<label for="campo9">Bairro</label>
-	<input type="text" class="form-control" name="bairro" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="bairro" id="bairro" style="text-transform:uppercase" required>
 </div></div>
 
 <div class="row">    
@@ -102,7 +102,7 @@
 		$rows = $PDO->query("SELECT cidade, uf, cidade_id FROM trans.uf_cidade");
 		while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 		{
-			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']."-".$row['uf']."</option>";
+			echo "<option value= ".$row['cidade_id']."> ".$row['cidade']." - ".$row['uf']."</option>";
 			
 		}
 		?>

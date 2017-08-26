@@ -13,7 +13,7 @@
 <div class="row">
 <div class="form-group col-md-2">
 	<label for="campo1">Placa</label>
-    <input type="text" class="form-control" name="placa" id="placa" style="text-transform:uppercase" required>
+    <input type="text" class="form-control" name="placa" id="placa" placeholder="Placa do Veiculo" style="text-transform:uppercase" required>
 </div>
 </div>
    <script type="text/javascript">
@@ -42,29 +42,29 @@
     </script>
 <div class="form-group col-md-6">
 	<label for="campo4">Modelo</label>
-	<input type="text" class="form-control" name="modelo" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="modelo" id="modelo" style="text-transform:uppercase" required>
 </div>
 
 <div class="form-group col-md-2">
 	<label for="campo5">Chassi</label>
-	<input type="text" class="form-control" name="chassi" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="chassi" id="chassi" style="text-transform:uppercase" required>
 </div>
 </div>    
 
 <div class="row">    
 <div class="form-group col-md-2">
 	<label for="campo6">Marca</label>
-	<input type="text" class="form-control" name="marca" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="marca" id="marca" style="text-transform:uppercase" required>
 </div>
  
 <div class="form-group col-md-2">
 	<label for="campo7">Cor</label>
-	<input type="text" class="form-control" name="cor" style="text-transform:uppercase" required>
+	<input type="text" class="form-control" name="cor" id="cor" style="text-transform:uppercase" required>
 </div>
 
 <div class="form-group col-md-8">
 	<label for="campo5">Descrição do Veiculo</label>
-	<input type="text" class="form-control" name="descricao" style="text-transform:uppercase">
+	<input type="text" class="form-control" name="descricao" id="descricao" style="text-transform:uppercase">
 </div>
 </div>
 

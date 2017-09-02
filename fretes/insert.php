@@ -5,16 +5,22 @@
 <?php
 $veiculo_id = $_POST['veiculo_id'];
 $data_entrada = $_POST['data_entrada'];
+	$dte = explode('/', $data_entrada);
+	$dteb = $dte[2].'-'.$dte[1].'-'.$dte[0];
 $data_fechamento = $_POST['data_fechamento'];
+	$dtf = explode('/', $data_fechamento);
+	$dtfb = $dtf[2].'-'.$dtf[1].'-'.$dtf[0];
 $nro_entrada = $_POST['nro_entrada'];
 $kminicial = $_POST['kminicial'];
 $kmfinal = $_POST['kmfinal'];
 $percorrido = $_POST['percorrido'];
+	function distancia ($percorrido)
+	{
+		$resultado= $kmfinal - $kminicial;
+	}
 $cidade_id = $_POST['cidade_id'];
 $vlr_frete = $_POST['vlr_frete'];
 $nf = $_POST['nf'];
-$status = $_POST['status'];
-$modificacao = $_POST['modificacao'];
 
 $sql = "insert into trans.frete
 (
@@ -27,9 +33,7 @@ kmfinal,
 percorrido,
 cidade_id,
 vlr_frete,
-nf,
-status,
-modificacao
+nf
 ) 
 values
 (
@@ -42,9 +46,7 @@ values
 '$percorrido',
 '$cidade_id',
 '$vlr_frete',
-'$nf',
-'$status',
-'$modificacao'
+'$nf'
 )";
 $stmt = $PDO->prepare ($sql);
 $stmt->bindParam('veiculo_id', $veiculo_id);
@@ -57,8 +59,6 @@ $stmt->bindParam('percorrido', $percorrido);
 $stmt->bindParam('cidade_id', $cidade_id);
 $stmt->bindParam('vlr_frete', $vlr_frete);
 $stmt->bindParam('nf', $nf);
-$stmt->bindParam('status', $status);
-$stmt->bindParam('modificacao', $modificacao);
 $result = $stmt->execute();
  
 if ( ! $result )
@@ -66,6 +66,8 @@ if ( ! $result )
     ( $stmt->errorInfo() );
     exit;
 }
-header("location: manfrete.php");
 ?>
+<script language="JavaScript"> 
+window.location="statusfrete.php"; 
+</script> 
 <?php include_once '../inc/footer.php'; ?>

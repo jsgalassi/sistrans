@@ -1,9 +1,7 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <?php include_once '../inc/header.php'; ?>
 <?php include_once '../conex/conexao.php';?>
-<script language="javascript" src="../js/jquery-3.2.1.min.js.js"></script>
-<script language="javascript" src="../js/jquery.mask.min.js"></script>
-<script language="javascript" src="../js/bootstrap-notify.min"></script>
+
 
 <h2>Listagem de Veiculos</h2>
 
@@ -42,9 +40,8 @@ echo
 		
     <td><h5><a href='form_veiculos_edit.php?veiculo_id=$row[veiculo_id]'>Editar</a> - 
 			<a href='delete.php?veiculo_id=$row[veiculo_id]'>Excluir</a></h5></td>
-</tr>";
+			</tr>";
 }
-
 ?>
 </tbody>
 </table>

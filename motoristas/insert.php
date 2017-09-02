@@ -1,7 +1,6 @@
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <?php include_once '../inc/header.php'; ?>
 <?php include_once '../conex/conexao.php';?>
-<?php include_once 'form_motoristas.php';?>
 
 <?php
 $veiculo_id = strtoupper($_POST['veiculo_id']);

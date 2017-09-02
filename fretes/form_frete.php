@@ -39,16 +39,17 @@
 <div class="row">   
 <div class="form-group col-md-2">
 	<label for="campo3">Data de Entrada</label>
-	<input type="date" class="form-control" name="data_entrada" id="data_entrada">
+	<input type="text" class="form-control" name="data_entrada" id="data_entrada">
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#data_entrada').mask('00/00/0000')
 })
 </script>
+
 <div class="form-group col-md-2">
 	<label for="campo4">Data de Fechamento</label>
-        <input type="date" class="form-control" name="data_fechamento" id="data_fechamento">
+        <input type="text" class="form-control" name="data_fechamento" id="data_fechamento">
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -72,13 +73,14 @@ $(document).ready(function(){
            
 <div class="form-group col-md-2">
 	<label for="campo8">Total Percorrido</label>
-	<input type="text" class="form-control" name="percorrido" id="percorrido" disabled>
+	<input type="text" class="form-control" name="percorrido" id="percorrido">
+    
 </div></div>
 
  <div class="row">            
 <div class="form-group col-md-2">
 	<label for="campo9">Valor Frete</label>
-	<input type="text" class="form-control" name="vlr_frete" id="vlr_frete" disabled>
+	<input type="text" class="form-control" name="vlr_frete" id="vlr_frete">
 </div>
        
 <div class="form-group col-md-2">

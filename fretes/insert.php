@@ -7,17 +7,17 @@ $veiculo_id = $_POST['veiculo_id'];
 $data_entrada = $_POST['data_entrada'];
 	$dte = explode('/', $data_entrada);
 	$dteb = $dte[2].'-'.$dte[1].'-'.$dte[0];
+
 $data_fechamento = $_POST['data_fechamento'];
 	$dtf = explode('/', $data_fechamento);
 	$dtfb = $dtf[2].'-'.$dtf[1].'-'.$dtf[0];
+
 $nro_entrada = $_POST['nro_entrada'];
 $kminicial = $_POST['kminicial'];
 $kmfinal = $_POST['kmfinal'];
 $percorrido = $_POST['percorrido'];
-	function distancia ($percorrido)
-	{
-		$resultado= $kmfinal - $kminicial;
-	}
+	$resultado = ($kmfinal - $kminicial);
+
 $cidade_id = $_POST['cidade_id'];
 $vlr_frete = $_POST['vlr_frete'];
 $nf = $_POST['nf'];
@@ -38,24 +38,24 @@ nf
 values
 (
 '$veiculo_id',
-'$data_entrada',
-'$data_fechamento',
+'$dteb',
+'$dtfb',
 '$nro_entrada',
 '$kminicial',
 '$kmfinal',
-'$percorrido',
+'$resultado',
 '$cidade_id',
 '$vlr_frete',
 '$nf'
 )";
 $stmt = $PDO->prepare ($sql);
 $stmt->bindParam('veiculo_id', $veiculo_id);
-$stmt->bindParam('data_entrada', $data_entrada);
-$stmt->bindParam('data_fechamento', $data_fechamento);
+$stmt->bindParam('data_entrada', $dteb);
+$stmt->bindParam('data_fechamento', $dtfb);
 $stmt->bindParam('nro_entrada', $nro_entrada); 
 $stmt->bindParam('kminicial', $kminicial);
 $stmt->bindParam('kmfinal', $kmfinal);
-$stmt->bindParam('percorrido', $percorrido);
+$stmt->bindParam('percorrido', $resultado);
 $stmt->bindParam('cidade_id', $cidade_id);
 $stmt->bindParam('vlr_frete', $vlr_frete);
 $stmt->bindParam('nf', $nf);

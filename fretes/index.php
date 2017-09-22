@@ -4,7 +4,7 @@
 
 <div class="row">
 <div class="col-xs-6 col-sm-3 col-md-3">
-<a href="form_frete.php" class="btn btn-primary btn-lg btn-block">
+    <a href="form_frete_abrir.php" class="btn btn-primary btn-lg btn-block">
 <div class="row">
 <div class="col-xs-12 text-center">
 <i class="fa fa-plus fa-4x"></i>

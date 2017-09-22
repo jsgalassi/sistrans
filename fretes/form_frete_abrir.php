@@ -48,15 +48,6 @@ $(document).ready(function(){
 </script>
 
 <div class="form-group col-md-2">
-	<label for="campo4">Data de Fechamento</label>
-        <input type="text" class="form-control" name="data_fechamento" id="data_fechamento">
-</div>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#data_fechamento').mask('00/00/0000')
-})
-</script>
-<div class="form-group col-md-2">
 	<label for="campo5">Nro de Entrada</label>
 	<input type="text" class="form-control" name="nro_entrada" id="nro_entrada" required>
 </div>
@@ -65,34 +56,11 @@ $(document).ready(function(){
 	<label for="campo6">Km Inicial</label>
 	<input type="text" class="form-control" name="kminicial" id="kminicial" required>
 </div>
-      
-<div class="form-group col-md-2">
-	<label for="campo7">Km Final</label>
-	<input type="text" class="form-control" name="kmfinal" id="kmfinal" required>
-</div>
-           
-<div class="form-group col-md-2">
-	<label for="campo8">Total Percorrido</label>
-	<input type="text" class="form-control" name="percorrido" id="percorrido">
-    
-</div></div>
-
- <div class="row">            
-<div class="form-group col-md-2">
-	<label for="campo9">Valor Frete</label>
-	<input type="text" class="form-control" name="vlr_frete" id="vlr_frete">
-</div>
-       
-<div class="form-group col-md-2">
-	<label for="campo10">Nota Fiscal</label>
-	<input type="text" class="form-control" name="nf" id="nf" required>
-</div>
-</div>
-
+ 
 <center>
 <div id="actions" class="row">
 	<div class="col-md-12">
-		<button type="submit" class="btn btn-primary">Salvar</button>
+		<button type="submit" class="btn btn-primary">Abrir Frete</button>
 		<a href="manfrete.php" class="btn btn-danger">Cancelar</a>
 </div>
 </div>

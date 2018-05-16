@@ -13,7 +13,7 @@ $marca = strtoupper($_POST['marca']);
 $cor = strtoupper($_POST['cor']);
 $descricao = strtoupper($_POST['descricao']);
 
-$sql = "insert into trans.veiculo
+$sql = "insert into veiculo
 (
 placa,
 nro_renavam,

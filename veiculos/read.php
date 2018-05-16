@@ -25,7 +25,7 @@
 
 <tbody>
 <?php
-$rows = $PDO->query("SELECT * FROM trans.veiculo");
+$rows = $PDO->query("SELECT * FROM veiculo");
 while ($row = $rows->fetch (PDO::FETCH_ASSOC))
 {
 echo 

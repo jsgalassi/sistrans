@@ -7,7 +7,7 @@ try
 		echo "ID não informado";
 		exit;
 	}
-	$sql = $PDO->prepare("DELETE FROM trans.veiculo
+	$sql = $PDO->prepare("DELETE FROM veiculo
 			WHERE 
 			veiculo_id = :veiculo_id");
 			$sql->bindParam(':veiculo_id', $veiculo_id);		

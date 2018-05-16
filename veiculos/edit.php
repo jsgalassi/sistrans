@@ -13,7 +13,7 @@ try
         
 	$descricao = strtoupper($_POST['descricao']);
 
-	$sql = $PDO->prepare("UPDATE trans.veiculo SET 
+	$sql = $PDO->prepare("UPDATE veiculo SET 
 		placa = :placa, 
 		nro_renavam = :nro_renavam,
 		ano = :ano,

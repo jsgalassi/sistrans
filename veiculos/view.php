@@ -7,7 +7,7 @@
 <?php
 /*Linha 9 a 11 pega o ID que veio via GET e faz um SELECT para trazer no formulario apenas os dados  */
 $veiculo_id = $_GET['veiculo_id'];
-$rows = $PDO->query("SELECT * FROM trans.veiculo where veiculo_id = '$veiculo_id'");
+$rows = $PDO->query("SELECT * FROM veiculo where veiculo_id = '$veiculo_id'");
 $row = $rows->fetch (PDO::FETCH_ASSOC);
 ?>
 <!--Linha 14 envia dos dados alterados do formulario de edição para o arquivo edit.php via POST  -->
